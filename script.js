@@ -8,7 +8,7 @@
         note.className = 'music-note';
         note.textContent = notes[Math.floor(Math.random() * notes.length)];
         note.style.left = `${Math.random() * 100}vw`;
-        note.style.fontSize = `${Math.random() * 20 + 10}px`;
+        note.style.fontSize = `${Math.random() * 80 + 10}px`;
         note.style.animationDuration = `${Math.random() * 10 + 10}s`;
         note.style.animationDelay = `${Math.random() * 5}s`;
         container.appendChild(note);
@@ -48,19 +48,28 @@
     }
 
     // Mobile menu toggle
-    function mobileMenu() {
-      const menuButton = document.getElementById('mobileMenuButton');
-      const closeButton = document.getElementById('closeMobileMenu');
-      const mobileMenu = document.getElementById('mobileMenu');
-      
-      menuButton.addEventListener('click', () => {
-        mobileMenu.classList.remove('hidden');
-      });
-      
-      closeButton.addEventListener('click', () => {
+function mobileMenu() {
+  const menuButton = document.getElementById('mobileMenuButton');
+  const closeButton = document.getElementById('closeMobileMenu');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  if (menuButton && closeButton && mobileMenu) {
+    menuButton.addEventListener('click', () => {
+      mobileMenu.classList.remove('hidden');
+    });
+
+    closeButton.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+    });
+
+    // Fecha o menu ao clicar em qualquer link
+    document.querySelectorAll('#mobileMenu a').forEach(link => {
+      link.addEventListener('click', () => {
         mobileMenu.classList.add('hidden');
       });
-    }
+    });
+  }
+}
 
     // Initialize functions when DOM is loaded
     document.addEventListener('DOMContentLoaded', () => {
@@ -73,3 +82,4 @@
       // Initial check for elements already in view
       scrollReveal();
     });
+    
