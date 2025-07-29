@@ -82,4 +82,11 @@ function mobileMenu() {
       // Initial check for elements already in view
       scrollReveal();
     });
+      function abrirMural() {
+    document.getElementById("muralFotos").classList.remove("hidden");
+  }
+
+  function fecharMural() {
+    document.getElementById("muralFotos").classList.add("hidden");
+  }
     

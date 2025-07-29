@@ -9,7 +9,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="gradient-bg">
+<body class="overflow-x-hidden w-full max-w-[100vw]">
   <!-- Music notes animation background -->
   <div id="musicNotes"></div>
 
@@ -34,14 +34,15 @@
     </div>
   </header>
 
- <!-- Botão de abrir o menu mobile -->
-<button id="mobileMenuButton" class="md:hidden fixed top-6 right-7 text-white text-3xl z-[9999] px-4">
+<!-- Botão de abrir o menu mobile -->
+<button id="mobileMenuButton"
+  class="md:hidden fixed top-4 right-2 text-white text-3xl z-[9999] w-10 h-10 flex items-center justify-center p-0 m-0">
   <i class="fas fa-bars"></i>
 </button>
 
 <!-- Menu Mobile -->
 <div id="mobileMenu" class="fixed inset-0 bg-black bg-opacity-80 z-50 hidden flex items-center justify-center px-8">
-  <div class="absolute top-6 right9">
+  <div class="absolute top-6 left-4">
     <button id="closeMobileMenu" class="text-white focus:outline-none">
       <i class="fas fa-times text-2xl"></i>
     </button>
@@ -57,7 +58,7 @@
 </div>
 
 
-  <!-- Hero Section -->
+
   <!-- Hero Section -->
 <section id="home" class="min-h-screen flex items-center justify-center pt-20 pb-20 px-4 reveal" style="background: rgba(0,0,0,0.5);">
   <div class="container mx-auto flex flex-col md:flex-row items-center justify-between text-center md:text-left">
@@ -160,138 +161,140 @@
   </section>
 
   <!-- Courses Section -->
-  <section id="courses" class="py-20 bg-secondary">
-    <div class="container mx-auto px-4 reveal">
-      <h2 class="text-3xl md:text-5xl font-bold text-center mb-6">
-        Nossos <span class="text-primary">Cursos</span>
-      </h2>
-      <p class="text-lg text-center text-gray-300 max-w-3xl mx-auto mb-16">
-        Oferecemos programas completos do iniciante ao avançado, com planos individuais ou em grupo para todas as idades.
-      </p>
+<section id="courses" class="py-20 bg-secondary">
+  <div class="container mx-auto px-4 reveal">
+    <h2 class="text-3xl md:text-5xl font-bold text-center mb-6">
+      Nossos <span class="text-primary">Cursos</span>
+    </h2>
+    <p class="text-lg text-center text-gray-300 max-w-3xl mx-auto mb-16">
+      Oferecemos programas completos do iniciante ao avançado, com planos individuais ou em grupo para todas as idades.
+    </p>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Violão -->
-        <div class="bg-dark rounded-2xl overflow-hidden shadow-xl hover-scale">
-          <div class="h-48 overflow-hidden">
-            <img src="https://placehold.co/600x400" alt="Aula de violão na Teclas & Cordas" class="w-full h-full object-cover">
-          </div>
-          <div class="p-8">
-            <div class="flex justify-between items-start mb-4">
-              <h3 class="text-xl font-bold">Violão</h3>
-              <div class="text-primary">
-                <i class="fas fa-guitar text-2xl"></i>
-              </div>
-            </div>
-            <p class="text-gray-300 mb-6">
-              Domine técnicas de fingerstyle, conhecimentos harmônicos e desenvolva seu repertório personalizado.
-            </p>
-            <ul class="mb-6 space-y-2">
-              <li class="flex items-center text-gray-300">
-                <i class="fas fa-check-circle text-primary mr-2"></i>
-                <span>Duração: Preferência do aluno</span>
-              </li>
-              <li class="flex items-center text-gray-300">
-                <i class="fas fa-check-circle text-primary mr-2"></i>
-                <span>Aulas individuais ou em grupo</span>
-              </li>
-              <li class="flex items-center text-gray-300">
-                <i class="fas fa-check-circle text-primary mr-2"></i>
-                <span>Material didático inclusivo</span>
-              </li>
-            </ul>
-            <div class="flex justify-between items-center">
-              <span class="text-primary font-bold">R$ 390/mês</span>
-              <a href="https://wa.me/54999156898" class="btn-primary px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider">
-                Matricule-se
-              </a>
-            </div>
-          </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Violão -->
+      <div class="bg-dark rounded-2xl overflow-hidden shadow-xl hover-scale">
+        <div class="h-48 overflow-hidden">
+          <img src="https://placehold.co/600x400" alt="Aula de violão na Teclas & Cordas" class="w-full h-full object-cover">
         </div>
-
-        <!-- Piano -->
-        <div class="bg-dark rounded-2xl overflow-hidden shadow-xl hover-scale transform hover:scale-105">
-          <div class="relative">
-            <div class="absolute inset-0 bg-primary bg-opacity-20"></div>
-            <span class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-xs font-bold uppercase">Mais Popular</span>
-            <div class="h-48 overflow-hidden">
-              <img src="https://placehold.co/600x400" alt="Aula de piano na Teclas & Cordas" class="w-full h-full object-cover">
+        <div class="p-8">
+          <div class="flex justify-between items-start mb-4">
+            <h3 class="text-xl font-bold">Violão</h3>
+            <div class="text-primary">
+              <i class="fas fa-guitar text-2xl"></i>
             </div>
           </div>
-          <div class="p-8">
-            <div class="flex justify-between items-start mb-4">
-              <h3 class="text-xl font-bold">Piano</h3>
-              <div class="text-primary">
-                <i class="fas fa-piano text-2xl"></i>
-              </div>
-            </div>
-            <p class="text-gray-300 mb-6">
-              Do clássico ao contemporâneo, desenvolva técnica, leitura musical e improvisação em nossa escola com pianos e teclados.
-            </p>
-            <ul class="mb-6 space-y-2">
-              <li class="flex items-center text-gray-300">
-                <i class="fas fa-check-circle text-primary mr-2"></i>
-                <span>Duração: Preferência do aluno</span>
-              </li>
-              <li class="flex items-center text-gray-300">
-                <i class="fas fa-check-circle text-primary mr-2"></i>
-                <span>Aulas individuais</span>
-              </li>
-              <li class="flex items-center text-gray-300">
-                <i class="fas fa-check-circle text-primary mr-2"></i>
-                <span>Acesso às salas de estudo</span>
-              </li>
-            </ul>
-            <div class="flex justify-between items-center">
-              <span class="text-primary font-bold">R$ 390/mês</span>
-              <a href="https://wa.me/54999156898" class="btn-primary px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider">
-                Matricule-se
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Violino -->
-        <div class="bg-dark rounded-2xl overflow-hidden shadow-xl hover-scale">
-          <div class="h-48 overflow-hidden">
-            <img src="https://placehold.co/600x400" alt="Aula de violino na Teclas & Cordas" class="w-full h-full object-cover">
-          </div>
-          <div class="p-8">
-            <div class="flex justify-between items-start mb-4">
-              <h3 class="text-xl font-bold">Violino</h3>
-              <div class="text-primary">
-                <i class="fas fa-violin text-2xl"></i>
-              </div>
-            </div>
-            <p class="text-gray-300 mb-6">
-              Técnicas de arco, postura e interpretação com instrumentos profissionais em ambiente perfeito.
-            </p>
-            <ul class="mb-6 space-y-2">
-              <li class="flex items-center text-gray-300">
-                <i class="fas fa-check-circle text-primary mr-2"></i>
-                <span>Duração: Preferência do aluno</span>
-              </li>
-              <li class="flex items-center text-gray-300">
-                <i class="fas fa-check-circle text-primary mr-2"></i>
-                <span>Aulas individuais ou em dupla</span>
-              </li>
-              <li class="flex items-center text-gray-300">
-                <i class="fas fa-check-circle text-primary mr-2"></i>
-                <span>Empréstimo de instrumento para iniciantes</span>
-              </li>
-            </ul>
-            <div class="flex justify-between items-center">
-              <span class="text-primary font-bold">R$ 390/mês</span>
-              <a href="https://wa.me/54999156898" class="btn-primary px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider">
-                Matricule-se
-              </a>
-            </div>
+          <p class="text-gray-300 mb-6">
+            Domine técnicas de fingerstyle, conhecimentos harmônicos e desenvolva seu repertório personalizado.
+          </p>
+          <ul class="mb-6 space-y-2">
+            <li class="flex items-center text-gray-300">
+              <i class="fas fa-check-circle text-primary mr-2"></i>
+              <span>Duração: Preferência do aluno</span>
+            </li>
+            <li class="flex items-center text-gray-300">
+              <i class="fas fa-check-circle text-primary mr-2"></i>
+              <span>Aulas individuais ou em grupo</span>
+            </li>
+            <li class="flex items-center text-gray-300">
+              <i class="fas fa-check-circle text-primary mr-2"></i>
+              <span>Material didático inclusivo</span>
+            </li>
+          </ul>
+          <div class="flex justify-between items-center">
+            <span class="text-primary font-bold">R$ 390/mês</span>
+            <a href="https://wa.me/5554999156898?text=Olá!%20Vim%20pelo%20site%20e%20me%20interessei%20pelo%20curso%20de%20violão.%20Como%20funciona?" 
+               class="btn-primary px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider" target="_blank">
+              Matricule-se
+            </a>
           </div>
         </div>
       </div>
 
-    
+      <!-- Piano -->
+      <div class="bg-dark rounded-2xl overflow-hidden shadow-xl hover-scale transform hover:scale-105">
+        <div class="relative">
+          <div class="absolute inset-0 bg-primary bg-opacity-20"></div>
+          <span class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-xs font-bold uppercase">Mais Popular</span>
+          <div class="h-48 overflow-hidden">
+            <img src="https://placehold.co/600x400" alt="Aula de piano na Teclas & Cordas" class="w-full h-full object-cover">
+          </div>
+        </div>
+        <div class="p-8">
+          <div class="flex justify-between items-start mb-4">
+            <h3 class="text-xl font-bold">Piano</h3>
+            <div class="text-primary">
+              <i class="fas fa-keyboard text-2xl"></i>
+            </div>
+          </div>
+          <p class="text-gray-300 mb-6">
+            Do clássico ao contemporâneo, desenvolva técnica, leitura musical e improvisação em nossa escola com pianos e teclados.
+          </p>
+          <ul class="mb-6 space-y-2">
+            <li class="flex items-center text-gray-300">
+              <i class="fas fa-check-circle text-primary mr-2"></i>
+              <span>Duração: Preferência do aluno</span>
+            </li>
+            <li class="flex items-center text-gray-300">
+              <i class="fas fa-check-circle text-primary mr-2"></i>
+              <span>Aulas individuais</span>
+            </li>
+            <li class="flex items-center text-gray-300">
+              <i class="fas fa-check-circle text-primary mr-2"></i>
+              <span>Acesso às salas de estudo</span>
+            </li>
+          </ul>
+          <div class="flex justify-between items-center">
+            <span class="text-primary font-bold">R$ 390/mês</span>
+            <a href="https://wa.me/5554999156898?text=Olá!%20Vim%20pelo%20site%20e%20me%20interessei%20pelo%20curso%20de%20piano.%20Como%20funciona?" 
+               class="btn-primary px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider" target="_blank">
+              Matricule-se
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Violino -->
+      <div class="bg-dark rounded-2xl overflow-hidden shadow-xl hover-scale">
+        <div class="h-48 overflow-hidden">
+          <img src="https://placehold.co/600x400" alt="Aula de violino na Teclas & Cordas" class="w-full h-full object-cover">
+        </div>
+        <div class="p-8">
+          <div class="flex justify-between items-start mb-4">
+            <h3 class="text-xl font-bold">Violino</h3>
+            <div class="text-primary">
+              <i class="fas fa-music text-2xl"></i>
+            </div>
+          </div>
+          <p class="text-gray-300 mb-6">
+            Técnicas de arco, postura e interpretação com instrumentos profissionais em ambiente perfeito.
+          </p>
+          <ul class="mb-6 space-y-2">
+            <li class="flex items-center text-gray-300">
+              <i class="fas fa-check-circle text-primary mr-2"></i>
+              <span>Duração: Preferência do aluno</span>
+            </li>
+            <li class="flex items-center text-gray-300">
+              <i class="fas fa-check-circle text-primary mr-2"></i>
+              <span>Aulas individuais ou em dupla</span>
+            </li>
+            <li class="flex items-center text-gray-300">
+              <i class="fas fa-check-circle text-primary mr-2"></i>
+              <span>Empréstimo de instrumento para iniciantes</span>
+            </li>
+          </ul>
+          <div class="flex justify-between items-center">
+            <span class="text-primary font-bold">R$ 390/mês</span>
+            <a href="https://wa.me/5554999156898?text=Olá!%20Vim%20pelo%20site%20e%20me%20interessei%20pelo%20curso%20de%20violino.%20Como%20funciona?" 
+               class="btn-primary px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider" target="_blank">
+              Matricule-se
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Facilities Section -->
 
@@ -442,10 +445,32 @@
       </div>
 
       <div class="mt-12 text-center">
-        <a href="#" class="inline-block border-2 border-primary text-primary px-8 py-3 rounded-full font-bold text-sm uppercase tracking-wider hover:text-white hover:bg-primary transition">
-          Ver Mais Fotos
-        </a>
-      </div>
+     <!-- Botão -->
+<button onclick="abrirMural()" class="btn-primary px-6 py-2 rounded-full mt-8 mx-auto block">
+  VER MAIS FOTOS
+</button>
+
+<!-- Mural Sobreposto -->
+<div id="muralFotos" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-90 backdrop-blur-sm z-50 hidden flex-col items-center justify-center overflow-y-auto px-6 py-10">
+  <button onclick="fecharMural()" class="text-white text-3xl absolute top-4 right-6 font-bold hover:scale-110 transition">&#10005;</button>
+  <h2 class="text-white text-3xl font-bold mb-8">Mural de Fotos</h2>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+    <!-- Exemplo de fotos -->
+    <img src="https://placehold.co/400x300" alt="Foto 1" class="rounded-lg shadow-lg">
+    <img src="https://placehold.co/400x300" alt="Foto 2" class="rounded-lg shadow-lg">
+    <img src="https://placehold.co/400x300" alt="Foto 3" class="rounded-lg shadow-lg">
+    <img src="https://placehold.co/400x300" alt="Foto 4" class="rounded-lg shadow-lg">
+    <img src="https://placehold.co/400x300" alt="Foto 5" class="rounded-lg shadow-lg">
+    <img src="https://placehold.co/400x300" alt="Foto 6" class="rounded-lg shadow-lg">
+    <img src="https://placehold.co/400x300" alt="Foto 7" class="rounded-lg shadow-lg">
+    <img src="https://placehold.co/400x300" alt="Foto 8" class="rounded-lg shadow-lg">
+    <img src="https://placehold.co/400x300" alt="Foto 9" class="rounded-lg shadow-lg">
+    <img src="https://placehold.co/400x300" alt="Foto 10" class="rounded-lg shadow-lg">
+    <img src="https://placehold.co/400x300" alt="Foto 11" class="rounded-lg shadow-lg">
+    <img src="https://placehold.co/400x300" alt="Foto 12" class="rounded-lg shadow-lg">
+  </div>
+</div>
     </div>
     
   </section>
