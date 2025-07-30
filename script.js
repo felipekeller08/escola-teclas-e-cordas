@@ -109,8 +109,7 @@ function mobileMenu() {
 
     // Ativa aba padrão (Piano)
     document.querySelector('[data-tab="piano"]').click();
-    function filtrar(categoria, botaoAtivo) {
-  // Filtragem das imagens
+function filtrar(categoria, botaoAtivo) {
   const todas = document.querySelectorAll(".foto");
   todas.forEach(foto => {
     if (categoria === "todos" || foto.classList.contains(categoria)) {
@@ -120,12 +119,10 @@ function mobileMenu() {
     }
   });
 
-  // Estilização dos botões
+  // Atualiza visual dos botões
   document.querySelectorAll(".btn-aba").forEach(btn => {
-    btn.classList.remove("bg-white", "text-black");
-    btn.classList.add("bg-red-500", "text-white");
+    btn.classList.remove("ativo");
   });
 
-  botaoAtivo.classList.add("bg-white", "text-black");
-  botaoAtivo.classList.remove("bg-red-500", "text-white");
+  botaoAtivo.classList.add("ativo");
 }

@@ -287,4 +287,26 @@ body {
     width: 12px;
   }
 }
+.btn-aba {
+  background-color: #e63946;
+  color: white;
+  border: 2px solid transparent;
+  padding: 0.5rem 1.5rem;
+  border-radius: 999px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  text-transform: uppercase;
+}
 
+.btn-aba.ativo {
+  background-color: transparent;
+  color: #e63946;
+  border-color: #e63946;
+  animation: pulse 2s infinite;
+  box-shadow: 0 0 15px rgba(230, 57, 70, 0.5);
+}
+.btn-aba:hover:not(.ativo) {
+  background-color: #1d1c1c; /* vermelho mais claro */
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #e63946;
+}
