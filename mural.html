@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mural de Fotos | Teclas & Cordas</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    function filtrar(categoria) {
+      const todas = document.querySelectorAll(".foto");
+      todas.forEach(foto => {
+        if (categoria === "todos" || foto.classList.contains(categoria)) {
+          foto.classList.remove("hidden");
+        } else {
+          foto.classList.add("hidden");
+        }
+      });
+    }
+  </script>
+</head>
+<body class="gradient-bg min-h-screen text-white bg-black">
+
+  <header class="py-6 px-8 flex justify-between items-center border-b border-gray-700">
+    <a href="index.html" class="text-2xl font-bold text-white">Teclas & Cordas</a>
+    <nav>
+      <a href="index.html" class="text-sm text-gray-300 hover:text-white mr-6">Início</a>
+      <a href="galeria.html" class="text-sm text-primary font-semibold border-b-2 border-primary">Mural</a>
+    </nav>
+  </header>
+
+  <main class="px-6 py-12 max-w-7xl mx-auto">
+    <h1 class="text-4xl font-bold text-center mb-2">Momentos Teclas & Cordas</h1>
+    <p class="text-center text-gray-300 mb-10 max-w-xl mx-auto">Registros de nossas aulas, apresentações e eventos especiais.</p>
+
+  <div class="flex justify-center gap-4 flex-wrap mb-10">
+  <button id="btn-todos" onclick="filtrar('todos', this)" class="btn-aba bg-white text-black font-semibold px-4 py-2 rounded-full">Todos</button>
+  <button id="btn-piano" onclick="filtrar('piano', this)" class="btn-aba bg-red-500 text-white px-4 py-2 rounded-full">Piano</button>
+  <button id="btn-violao" onclick="filtrar('violao', this)" class="btn-aba bg-red-500 text-white px-4 py-2 rounded-full">Violão</button>
+  <button id="btn-violino" onclick="filtrar('violino', this)" class="btn-aba bg-red-500 text-white px-4 py-2 rounded-full">Violino</button>
+  <button id="btn-alunos" onclick="filtrar('alunos', this)" class="btn-aba bg-red-500 text-white px-4 py-2 rounded-full">Alunos em Geral</button>
+</div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <!-- Piano -->
+      <div class="foto piano flex flex-col items-center">
+        <img src="https://placehold.co/400x300?text=Piano+1" class="rounded-xl shadow-lg hover:scale-105 transition duration-300" />
+        <p class="mt-2 text-sm font-medium">Aula de Piano — maio 2024</p>
+      </div>
+      <div class="foto piano flex flex-col items-center">
+        <img src="https://placehold.co/400x300?text=Piano+2" class="rounded-xl shadow-lg hover:scale-105 transition duration-300" />
+        <p class="mt-2 text-sm font-medium">Ensaios de piano — julho 2024</p>
+      </div>
+
+      <!-- Violão -->
+      <div class="foto violao flex flex-col items-center">
+        <img src="https://placehold.co/400x300?text=Violão+1" class="rounded-xl shadow-lg hover:scale-105 transition duration-300" />
+        <p class="mt-2 text-sm font-medium">Aula de Violão — junho 2024</p>
+      </div>
+      <div class="foto violao flex flex-col items-center">
+        <img src="https://placehold.co/400x300?text=Violão+2" class="rounded-xl shadow-lg hover:scale-105 transition duration-300" />
+        <p class="mt-2 text-sm font-medium">Prática em grupo — abril 2024</p>
+      </div>
+
+      <!-- Violino -->
+      <div class="foto violino flex flex-col items-center">
+        <img src="https://placehold.co/400x300?text=Violino+1" class="rounded-xl shadow-lg hover:scale-105 transition duration-300" />
+        <p class="mt-2 text-sm font-medium">Concerto de Violino — agosto 2023</p>
+      </div>
+      <div class="foto violino flex flex-col items-center">
+        <img src="https://placehold.co/400x300?text=Violino+2" class="rounded-xl shadow-lg hover:scale-105 transition duration-300" />
+        <p class="mt-2 text-sm font-medium">Ensaio de Cordas — março 2024</p>
+      </div>
+
+      <!-- Alunos em Geral -->
+      <div class="foto alunos flex flex-col items-center">
+        <img src="https://placehold.co/400x300?text=Alunos+1" class="rounded-xl shadow-lg hover:scale-105 transition duration-300" />
+        <p class="mt-2 text-sm font-medium">Apresentações — novembro 2023</p>
+      </div>
+      <div class="foto alunos flex flex-col items-center">
+        <img src="https://placehold.co/400x300?text=Alunos+2" class="rounded-xl shadow-lg hover:scale-105 transition duration-300" />
+        <p class="mt-2 text-sm font-medium">Evento Final de Ano — dezembro 2023</p>
+      </div>
+    </div>
+
+    <div class="text-center mt-16">
+      <a href="index.html" class="bg-red-500 hover:bg-red-600 text-white font-semibold px-6 py-2 rounded-full inline-block">Voltar para o site</a>
+    </div>
+  </main>
+
+
+  <!-- JS para Abas -->
+  <script src="script.js"></script>
+</body>
+</html>

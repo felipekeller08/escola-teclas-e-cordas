@@ -89,4 +89,43 @@ function mobileMenu() {
   function fecharMural() {
     document.getElementById("muralFotos").classList.add("hidden");
   }
-    
+  const tabButtons = document.querySelectorAll('.tab-button');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const target = button.getAttribute('data-tab');
+
+        tabContents.forEach(content => {
+          content.classList.add('hidden');
+        });
+
+        document.getElementById(target).classList.remove('hidden');
+
+        tabButtons.forEach(btn => btn.classList.remove('bg-white', 'text-primary'));
+        button.classList.add('bg-white', 'text-primary');
+      });
+    });
+
+    // Ativa aba padrão (Piano)
+    document.querySelector('[data-tab="piano"]').click();
+    function filtrar(categoria, botaoAtivo) {
+  // Filtragem das imagens
+  const todas = document.querySelectorAll(".foto");
+  todas.forEach(foto => {
+    if (categoria === "todos" || foto.classList.contains(categoria)) {
+      foto.classList.remove("hidden");
+    } else {
+      foto.classList.add("hidden");
+    }
+  });
+
+  // Estilização dos botões
+  document.querySelectorAll(".btn-aba").forEach(btn => {
+    btn.classList.remove("bg-white", "text-black");
+    btn.classList.add("bg-red-500", "text-white");
+  });
+
+  botaoAtivo.classList.add("bg-white", "text-black");
+  botaoAtivo.classList.remove("bg-red-500", "text-white");
+}
